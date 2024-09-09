@@ -18,7 +18,34 @@ def dens_bethe(x,d):
   return dens_bethe.real
 
 #READ ED INPUT:
-ed.read_input("inputED.conf")
+#ed.read_input("inputED.conf")
+ed.Nspin = 1
+ed.Norb = 1
+ed.Nbath = 7
+ed.beta = 1000.0
+ed.xmu = .0
+ed.Uloc = np.array([2.0, 0.0, 0.0, 0.0, 0.0], dtype=float)
+ed.Ust = .0
+ed.Jh = .0
+ed.Jx = .0
+ed.Jp =.0
+ed.Nph = 0
+ed.Nloop = 1
+ed.Nsuccess = 1
+ed.dmft_error = 1e-4
+ed.LOGfile = 6
+ed.Lmats = 6000
+ed.Lreal = 4000
+ed.Ltau = 1000
+ed.Lpos = 100
+ed.eps = 4e-2
+ed.wini = -5.0
+ed.wfin = 5.0
+ed.xmin = -3.0
+ed.xmax = 3.0
+ed.sb_field = 0.1
+ed.nread = 0.0
+
 if(ed.Nspin!=1 or ed.Norb!=1):
     print("This test code is for Nspin=1 + Norb=1.")
     ed.Nspin=1
